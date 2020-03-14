@@ -34,12 +34,23 @@
 export default {
     data(){
         return{
-            message:""
+            message:"",
+            testList:["site","website",],
+            grammar:["a","an","the"]
         }
     },
     methods:{
+        removeGrammar(sentence){
+            // remove all words included in grammar[] from sentence
+        },
         search(){
             // https://www.google.com/search?q=site%3Alinkedin.com%2Fin+
+                var m1=this.message
+            if(m.includes('everything')){
+                m1.replace("everything","")
+                var m2=this.removeGrammar(m1)
+                window.open(`https://www.google.com/search?q=${m2}`)
+                }
             var m=encodeURI(this.message)
             window.open(`https://www.google.com/search?q=${m}`)
         }
