@@ -49,6 +49,7 @@ export default {
             helpDialog:false,
             message:"",
             testList:[" site "," website "," dated "," everything ", " intitle ", " inurl "],
+            replaceDork:{" site ":" site:"," website ":" site:"," intitle ":" intitle:"," inurl ":" inurl:"," url ":" inurl:"," address ":" inurl:",},
             grammar:[" a "," an "," the ", " in ", " on ", " every "],
             sentence:""
         }
@@ -66,12 +67,16 @@ export default {
             this.sentence=sentence
             var self=this
             for(let i of self.testList){
-               this.sentence= this.sentence.replace(i," ")
+              if(self.sentence.includes(i)){
+                self.sentence=self.sentence.replace(i,self.replaceDork[i])
+                console.log(self.sentence)
+              }
+              //  this.sentence= this.sentence.replace(i," ")
             }
   setTimeout(() => {return "Done", 500});
         },
         search(){
-            this.removeGrammar(this.message)
+            this.removeGrammar(this.message+" ")
             .then(res=>{
                 if(this.sentence && this.sentence.length>0){
             var m=encodeURI(this.sentence)
@@ -81,7 +86,8 @@ export default {
             
         },
         showHelp(){
-            window.open("https://www.sans.org/security-resources/GoogleCheatSheet.pdf")
+          this.removetestList(this.message)
+            // window.open("https://www.sans.org/security-resources/GoogleCheatSheet.pdf")
         }
     }
 };
