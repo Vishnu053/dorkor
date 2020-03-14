@@ -17,6 +17,7 @@
               label="What Are You Looking For?"
               outlined
               clearable
+              @keyup="message=message.toLowerCase()"
               @keydown.enter="search"
             ></v-text-field>
           </v-col>
@@ -24,9 +25,20 @@
       </v-col>
 
       <v-col class="mb-5" cols="12">
-        <v-icon small class="mb-3">mdi-help</v-icon>
+          <v-btn icon fab text small @click="showHelp">
+               <v-icon small style="margin-top:7px;" class="mb-3">mdi-help</v-icon>
+          </v-btn>
+       
       </v-col>
     </v-row>
+    <!-- <v-dialog
+        v-model="helpDialog"
+         :overlay="true"
+         style="min-width:500px;min-height:500px;"
+        transition="slide-y-reverse-transition"
+    >
+        <iframe src="./public/content/GoogleCheatSheet.pdf" frameborder="0" height="500px"></iframe>
+    </v-dialog> -->
   </v-container>
 </template>
 
@@ -34,25 +46,42 @@
 export default {
     data(){
         return{
+            helpDialog:false,
             message:"",
-            testList:["site","website",],
-            grammar:["a","an","the"]
+            testList:[" site "," website "," dated "," everything ", " intitle ", " inurl "],
+            grammar:[" a "," an "," the ", " in ", " on ", " every "],
+            sentence:""
         }
     },
     methods:{
-        removeGrammar(sentence){
-            // remove all words included in grammar[] from sentence
+        async removeGrammar(sentence){
+            this.sentence=sentence
+            var self=this
+            for(let i of self.grammar){
+               this.sentence= this.sentence.replace(i," ")
+            }
+  setTimeout(() => {return "Done", 500});
+        },
+        async removetestList(sentence){
+            this.sentence=sentence
+            var self=this
+            for(let i of self.testList){
+               this.sentence= this.sentence.replace(i," ")
+            }
+  setTimeout(() => {return "Done", 500});
         },
         search(){
-            // https://www.google.com/search?q=site%3Alinkedin.com%2Fin+
-                var m1=this.message
-            if(m.includes('everything')){
-                m1.replace("everything","")
-                var m2=this.removeGrammar(m1)
-                window.open(`https://www.google.com/search?q=${m2}`)
-                }
-            var m=encodeURI(this.message)
+            this.removeGrammar(this.message)
+            .then(res=>{
+                if(this.sentence && this.sentence.length>0){
+            var m=encodeURI(this.sentence)
             window.open(`https://www.google.com/search?q=${m}`)
+            }
+                })
+            
+        },
+        showHelp(){
+            window.open("https://www.sans.org/security-resources/GoogleCheatSheet.pdf")
         }
     }
 };
