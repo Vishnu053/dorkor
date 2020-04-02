@@ -39,11 +39,11 @@
         </v-row>
       </v-col>
 
-      <v-col class="mb-5" cols="12">
+      <!-- <v-col class="mb-5" cols="12">
         <v-btn icon fab text small @click="showHelp">
           <v-icon small style="margin-top:7px;" class="mb-3">mdi-help</v-icon>
         </v-btn>
-      </v-col>
+      </v-col> -->
     </v-row>
     <!-- <v-dialog
         v-model="helpDialog"
