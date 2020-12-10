@@ -1,0 +1,110 @@
+{
+    "items": [
+        {
+            "title": "Linkedin Dorking",
+            "icon": "mdi-clock",
+            "dorkList": [
+                {
+                    "text": "search for a particular title in Linkedin",
+                    "dork": "site:linkedin.com intitle:"
+                },
+                {
+                    "text": "search for public login information in Trello",
+                    "dork": "inurl:trello.com intext:login"
+                },
+                {
+                    "text": "search for ftp information in Trello",
+                    "dork": "inurl:trello.com intext:ftp"
+                },
+                {
+                    "text": "search for unsecured credentials in Trello",
+                    "dork": "inurl:trello.com intext:password and intext:username"
+                }
+            ]
+        },
+        {
+            "title": "Trello Dorking",
+            "icon": "mdi-clock",
+            "dorkList": [
+                {
+                    "text": "search for public login information in Trello",
+                    "dork": "inurl:trello.com intext:login"
+                },
+                {
+                    "text": "search for ftp information in Trello",
+                    "dork": "inurl:trello.com intext:ftp"
+                },
+                {
+                    "text": "search for unsecured credentials in Trello",
+                    "dork": "inurl:trello.com intext:password and intext:username"
+                }
+            ]
+        },
+        {
+            "title": "Website Dorking",
+            "icon": "mdi-account",
+            "dorkList": [
+                {
+                    "text": "Find username in log files related to a particular site",
+                    "dork": "site:site.com allintext:username filetype:log"
+                },
+                {
+                    "text": "Find env files related to a particular site",
+                    "dork": "site:site.com allintext:username filetype:env"
+                },
+                {
+                    "text": "Find ssh public key files related to a particular site",
+                    "dork": "site:site.com intitle:index.of id_rsa -id_rsa.pub"
+                },
+                {
+                    "text": "Find ssh SSH usernames from PUTTY logs related to a particular site",
+                    "dork": "site:site.com filetype:log username putty"
+                },
+                {
+                    "text": "Find open ftp servers",
+                    "dork": "intitle:\"index of\" inurl:ftp"
+                },
+                {
+                    "text": "Find vulnerable web servers",
+                    "dork": "inurl:/proc/self/cwd"
+                },
+                {
+                    "text": "Find excel files containing emails",
+                    "dork": "filetype:xls inurl:\"email.xls\""
+                },
+                {
+                    "text": "Find excel files containing emails from .org sites",
+                    "dork": "site:.org filetype:xls inurl:\"email.xls\""
+                }
+            ]
+        },
+        {
+            "title": "Camera Dorking",
+            "icon": "mdi-clock",
+            "dorkList": [
+                {
+                    "text": "search for public cameras",
+                    "dork": "inurl:top.htm inurl:currenttime"
+                },
+                {
+                    "text": "search for specific camera trasnmissions",
+                    "dork": "intitle:\"webcamXP 5\""
+                },
+                {
+                    "text": "search for general live cameras",
+                    "dork": "inurl:\"lvappl.htm\""
+                }
+            ]
+        },
+        {
+            "title": "Weather Dorking",
+            "icon": "mdi-clock",
+            "dorkList": [
+                {
+                    "text": "search for weather wing devices",
+                    "dork": "intitle:\"Weather Wing WS-2\""
+                }
+            ]
+        }
+    ]
+}

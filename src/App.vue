@@ -1,55 +1,54 @@
 <template>
   <v-app>
-    <!-- <v-navigation-drawer
-        v-model="drawer"
-        app
-        clipped
-      >
-        <v-list dense>
-          <v-list-item link>
-            <v-list-item-action>
-              <v-icon>mdi-view-dashboard</v-icon>
-            </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title>Dashboard</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item link>
-            <v-list-item-action>
-              <v-icon>mdi-settings</v-icon>
-            </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title>Settings</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
-      </v-navigation-drawer> -->
-
-      <!-- <v-app-bar
-      app
-      clipped-left
-    >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>Dorker</v-toolbar-title>
-    </v-app-bar> -->
-
-    <v-content>
-      <router-view/>
-    </v-content>
+    <v-main>
+      <router-view />
+    </v-main>
   </v-app>
 </template>
 
 <script>
-
 export default {
-  name: 'App',
+  name: "App",
 
   data: () => ({
-    drawer:false
+    drawer: false,
     //
   }),
-  created () {
-  this.$vuetify.theme.dark = true
-},
+  created() {
+    this.$vuetify.theme.dark = true;
+  },
 };
 </script>
+<style>
+.border-primary {
+  border: 0.5px solid var(--v-primary-base);
+}
+.border-secondary {
+  border: 0.5px solid var(--v-secondary-base);
+}
+.v-text-field__details {
+  height: 0;
+  display: none;
+}
+.c-pointer {
+  cursor: pointer;
+}
+.border-top-primary{
+  border-top: 1px solid var(--v-primary-base);
+}
+.border-bottom-primary{
+  border-bottom: 1px solid var(--v-primary-base);
+}
+body{
+  scroll-behavior: smooth;
+}
+</style>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;900&display=swap");
+.v-application,.app-title {
+  font-family: "Inconsolata", monospace !important;
+}
+.app-title{
+  font-size: 3em;
+}
+</style>
