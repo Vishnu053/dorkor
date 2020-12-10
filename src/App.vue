@@ -2,14 +2,24 @@
   <v-app>
     <v-main>
       <router-view />
+           <!-- SW update snackbar -->
+    <v-snackbar bottom center v-model="updateExists" :timeout="-1" color="primary">
+  <div class="row mx-2"><div class="col-8 pb-0 pt-2">Update available!</div>
+  <v-btn small class="col-4 py-0 mt-1 primary--text" color="white" @click="refreshApp">
+    Update
+  </v-btn>
+  </div>
+</v-snackbar>
     </v-main>
+
   </v-app>
 </template>
 
 <script>
+import update from '@/mixins/sWorkerUpdate.js'
 export default {
   name: "App",
-
+  mixins: [update],
   data: () => ({
     drawer: false,
     //
@@ -41,6 +51,9 @@ export default {
 }
 body{
   scroll-behavior: smooth;
+}
+.t-a-r{
+  text-align: right;
 }
 </style>
 <style>
