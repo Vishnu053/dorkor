@@ -7,18 +7,6 @@
                 {
                     "text": "search for a particular title in Linkedin",
                     "dork": "site:linkedin.com intitle:"
-                },
-                {
-                    "text": "search for public login information in Trello",
-                    "dork": "inurl:trello.com intext:login"
-                },
-                {
-                    "text": "search for ftp information in Trello",
-                    "dork": "inurl:trello.com intext:ftp"
-                },
-                {
-                    "text": "search for unsecured credentials in Trello",
-                    "dork": "inurl:trello.com intext:password and intext:username"
                 }
             ]
         },
