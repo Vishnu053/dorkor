@@ -17,6 +17,6 @@ A google dork helper made with Vue.js and Vuetify.
 > npm run build
 
   
-[![Stargazers repo roster for @Vishnu053/dorkor](https://reporoster.com/stars/Vishnu053/dorkor)](https://github.com/Vishnu053/dorkor/stargazers)
+[![Stargazers repo roster for @Vishnu053/dorkor](https://reporoster.com/stars/dark/Vishnu053/dorkor)](https://github.com/Vishnu053/dorkor/stargazers)
   
-[![Forkers repo roster for @Vishnu053/dorkor](https://reporoster.com/forks/Vishnu053/dorkor)](https://github.com/Vishnu053/dorkor/network/members)
+[![Forkers repo roster for @Vishnu053/dorkor](https://reporoster.com/forks/dark/Vishnu053/dorkor)](https://github.com/Vishnu053/dorkor/network/members)
