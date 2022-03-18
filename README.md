@@ -15,3 +15,8 @@ A google dork helper made with Vue.js and Vuetify.
 ### Build for production
 
 > npm run build
+
+  
+[![Stargazers repo roster for @Vishnu053/dorkor](https://reporoster.com/stars/Vishnu053/dorkor)](https://github.com/Vishnu053/dorkor/stargazers)
+  
+[![Forkers repo roster for @Vishnu053/dorkor](https://reporoster.com/forks/Vishnu053/dorkor)](https://github.com/Vishnu053/dorkor/network/members)
